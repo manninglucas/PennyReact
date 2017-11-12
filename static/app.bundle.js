@@ -18385,7 +18385,7 @@ var PennySearch = function (_React$Component) {
             fetch('/searchresults?author=' + querystring + '&messageId=' + messageId).then(function (resp) {
                 return resp.json();
             }).then(function (data) {
-                _this2.setState({ books: data });
+                return _this2.setState({ books: data });
             }).catch(function (error) {
                 return console.log(error);
             });

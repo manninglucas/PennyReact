@@ -25,9 +25,9 @@ export default class PennySearch extends React.Component {
         let messageId =  Math.floor(Math.random(seed) * 1000000) + 1;
 
         fetch(`/searchresults?author=${querystring}&messageId=${messageId}`)
-            .then(resp => resp.json()).then(data => {
-                this.setState({books: data});
-            }).catch((error) => console.log(error));                    
+            .then(resp => resp.json())
+            .then(data => this.setState({books: data}))
+            .catch(error => console.log(error));                    
     }
 
     render() {
